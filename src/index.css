@@ -5,6 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden; /* Wyłącza przewijanie strony */
+  height: 100vh; /* Ustawia wysokość na 100% widoku */
+  margin: 0; /* Usuwa domyślne marginesy */
+ 
 }
 
 code {

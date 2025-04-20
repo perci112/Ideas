@@ -1,0 +1,500 @@
+.dashboard {
+    padding: 20px;
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+   
+    height: 70vh;
+  }
+  
+  .card {
+    background: #1a1a1a;
+    padding: 16px;
+
+    border-radius: 12px;
+  }
+  
+  .card.large {
+    grid-column: span 2;
+    margin-bottom: 15px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+  .image-list {
+    display: flex;
+    flex-wrap: nowrap; /* Zapobiega zawijaniu elementów w nowy wiersz */
+    overflow-x: auto; /* Umożliwia przewijanie w poziomie */
+    gap: 10px; /* Odstępy między obrazkami */
+    padding: 10px;
+    max-width: 90%; /* Ogranicza szerokość listy */
+    margin: 0 auto; /* Centruje listę na stronie */
+  }
+  .image-item-container {
+    position: relative; /* Ustawia kontener jako odniesienie dla pozycjonowania absolutnego */
+    width: 150px; /* Szerokość kontenera */
+    height: 100px; /* Wysokość kontenera */
+    flex-shrink: 0; /* Zapobiega skalowaniu kontenera */
+  }
+  
+  .image-item-container img {
+    width: 100%; /* Dopasowuje obrazek do szerokości kontenera */
+    height: 100%; /* Dopasowuje obrazek do wysokości kontenera */
+    object-fit: cover; /* Dopasowuje obrazek do ramki */
+    border-radius: 8px; /* Zaokrąglone rogi */
+  }
+  
+  .image-item-container h1 {
+    position: absolute; /* Pozycjonowanie względem kontenera */
+    top: 40%; /* Ustawia tekst na środku w pionie */
+    left: 50%; /* Ustawia tekst na środku w poziomie */
+    transform: translate(-50%, -50%); /* Centruje tekst */
+    color: white; /* Kolor tekstu */
+    font-size: 16px; /* Rozmiar tekstu */
+    font-weight: bold; /* Pogrubienie tekstu */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Cień dla lepszej widoczności */
+    text-align: center; /* Wyśrodkowanie tekstu */
+  }
+  
+  .card-subtitle {
+    font-size: 12px;
+    color: #aaa;
+  }
+  
+  .card-number {
+    font-size: 17px;
+    margin-top: 8px;
+    list-style: none;
+  }
+  
+  .calendar-placeholder {
+    height: 60px;
+    background: #2a2a2a;
+    margin-top: 10px;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 60px;
+    color: #777;
+    font-size: 12px;
+  }
+  #MENU{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: right;
+    padding: 10px 20px;
+    size: 10px;
+    font-size: 40px;
+    color: white;
+  }
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  
+    
+  }
+#listacwiczen{
+    flex-grow: 1; /* Pozwala kontenerowi wypełnić dostępną przestrzeń */
+    overflow-y: auto; /* Włącza przewijanie w pionie, jeśli zawartość przekracza wysokość */
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    margin-bottom: 5%;
+}
+  #listacwiczen ul{
+    list-style: none;
+
+  }
+  #listacwiczen ul li{
+    background-color: rgb(48, 45, 45);
+    margin-bottom: 2px;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-left: -40px;
+    padding-bottom: 3px;
+    margin-right: 5px;
+    border-radius: 8px;
+
+  }
+  .card-subtitle {
+    font-size: 15px;
+    color: #aaa;
+    list-style: none;
+
+  }
+  .slide-up-window {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80%; /* Wysokość wysuwanego okna */
+    background-color: #1a1a1a;
+    color: white;
+    border-top: 2px solid #ccc;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+   
+    animation: slide-up 0.3s ease-out;
+  }
+  
+  @keyframes slide-up {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  .slide-up-window.closing {
+    animation: slide-down 0.3s ease-out;
+    
+  }
+  
+  @keyframes slide-down {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(100%);
+    }
+  }
+  
+  .slide-up-window button {
+    margin-top: -10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 20%;
+    align-self: center;
+    cursor: pointer;
+  }
+  
+  .slide-up-window button:hover {
+    background-color: #ff1a1a;
+  }
+  .focia{
+border-radius: 100%;
+    width: 10vh;
+    height: 10vh;
+    object-fit: cover;
+    align-self: center;
+    margin-top: 10px;
+    border: 2px solid white;
+    background-color: black;
+
+  }
+  .daneosobowe{
+    
+    align-items: left;
+    
+    margin-top: 10px;
+    margin-left: 1vh;
+   
+    width: 40vh;
+   
+  }.daneosobowe h1{
+    
+    align-self: center;
+   text-align: center;
+   margin-left: 4vh;
+  }
+.dane{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+   
+    margin-top: 10px;
+    color: white;
+    font-size: 20px;
+  }
+  .dane li{
+    padding: 0.5vh;
+    
+    margin-bottom: 5px;
+    align-items: center;
+    align-self: center;
+    display: inline-block; /* Dopasowuje szerokość do zawartości */
+    width: fit-content;
+
+  }
+  .dane h1{
+    font-size: 30px;
+  }
+  .Dane{
+    margin-left:-2vh;
+    margin-top: -4vh;
+  }
+  .dane p{
+    font-size: 20px;
+  }
+  .dane a{
+    color: white;
+    text-decoration: none;
+  }
+  .dane a:hover{
+    text-decoration: underline;
+  }
+  .dane a:visited{
+    color: white;
+  }
+  .single-line {
+    border: none;
+    border-top: 1px solid rgba(53, 50, 50, 0.718); /* Kolor i styl linii */
+    margin: 10px 0; /* Odstępy nad i pod linią */
+margin-left: 2vh;
+margin-right: 2vh;
+  }
+  .opcje{
+width: 100%;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    
+   
+    height: 30vh;
+    list-style: none;
+font-size: 3vh;
+align-items: center;
+text-align: center;
+  }
+  .opcje li{
+    width: 100%;
+      margin: 0vh -4vh;
+        border-bottom: 1px solid rgba(53, 50, 50, 0.718);
+         /* Kolor i styl linii */
+        padding: 1vh;
+    
+      }
+      .opcje li:first-of-type{
+       
+            border-top: 1px solid rgba(53, 50, 50, 0.718);
+             /* Kolor i styl linii */
+           
+        
+          }
+          .opcje li:hover{
+            width: 100%;
+              margin: 0vh -4vh;
+                border-bottom: 1px solid rgba(53, 50, 50, 0.718);
+                 /* Kolor i styl linii */
+                 background-color:#ba2525;
+                padding: 1vh;
+            
+              }
+          /* Kontener dla przycisku "Zaloguj" */
+.zaloguj-container {
+    display: flex;
+    justify-content: center; /* Wyśrodkowanie przycisku */
+    margin-top: 20px;
+  }
+  
+  /* Stylizacja przycisku "Zaloguj" */
+  .slide-up-window .zaloguj {
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1;
+    position: fixed;
+    align-self: right;
+    right: 20px; /* Umożliwia przesunięcie przycisku */
+  }
+  
+  .slide-up-window .zaloguj:hover {
+    background-color: #ff1a1a;
+  }
+  /* Stylizacja dla wyskakującego okienka */
+.login-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Półprzezroczyste tło */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .login-modal-content {
+    background-color: #1a1a1a;
+    color: white;
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    animation: slide-down-login 0.5s ease-out; /* Animacja spadania */
+    position: relative;
+  }
+  
+  
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .close-button:hover {
+    color: #ff4d4d;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 95%;
+    padding: 10px;
+    
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: white;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #ff4d4d;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #ff1a1a;
+  }
+  * Stylizacja dla wyskakujących okienek */
+.modal-content {
+  background-color: #1a1a1a;
+  color: white;
+  width: 30%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  animation: slide-down 0.5s ease-out;
+  position: relative;
+}
+
+
+
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: #ff4d4d;
+}
+
+/* Stylizacja dla wyskakujących okienek */
+.settings-modal, .notifications-modal, .help-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Półprzezroczyste tło */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .settings-modal .modal-content,
+  .notifications-modal .modal-content,
+  .help-modal .modal-content {
+    background-color: #1a1a1a;
+    color: white;
+    width: 90%; /* Szerokość okna */
+    height: 80%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    animation: slide-down-login 0.5s forwards; /* Animacja spadania */
+    position: relative;
+  }
+  
+  /* Przycisk zamykania */
+  .settings-modal .close-button,
+  .notifications-modal .close-button,
+  .help-modal .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .settings-modal .close-button:hover,
+  .notifications-modal .close-button:hover,
+  .help-modal .close-button:hover {
+    color: #ff4d4d;
+  }
+  
+  @keyframes slide-down-login {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  
