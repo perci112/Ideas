@@ -125,10 +125,7 @@
     background-color: rgb(48, 45, 45);
     margin-bottom: 2px;
     font-size: 20px;
-    padding-left: 10px;
-    margin-left: -40px;
-    padding-bottom: 3px;
-    margin-right: 5px;
+padding-left: 5px;
     border-radius: 8px;
 
   }
@@ -284,7 +281,7 @@ text-align: center;
   }
   .opcje li{
     width: 100%;
-      margin: 0vh -4vh;
+      
         border-bottom: 1px solid rgba(53, 50, 50, 0.718);
          /* Kolor i styl linii */
         padding: 1vh;
